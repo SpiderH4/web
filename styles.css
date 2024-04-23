@@ -127,7 +127,7 @@ body {
 /* Adjust button size for screens larger than 900px */
 @media (min-width: 900px) {
     .button {
-        width: 400px;
+        width: 450px;
         height: 350px;
     }
 }
