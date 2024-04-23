@@ -8,19 +8,30 @@
 	<div class="container">
 		<h1 class="title">Metodos de descarga</h1>
 		<p class="description">
-			Elija su sistema operativo preferido:
+			Elija su sistema operativo preferido: <br><br>
+			Version 1.0.2
 		</p>
 		<div class="buttons">
-			<button class="button windows">
-				<img src="logoW.png" alt="Windows logo">
+			<div class="button-container">
+				<button id="download-button-windows" class="button windows">
+					<img src="logoW.png" alt="Windows logo">
+					<span>Windows</span>
 			</button>
-			<button class="button linux">
-				<img src="logoL.webp" alt="Linux logo">
-			</button>
-			<button class="button macos">
-				<img src="logoM.png" alt="MacOS logo">
-			</button>
+			</div>
+			<div class="button-container">
+				<button id="download-button-linux" class="button linux">
+					<img src="logoLi.png" alt="Linux logo">
+					<span>Linux</span>
+				</button>
+			</div>
+			<div class="button-container">
+				<button id="download-button-macos" class="button macos">
+					<img src="logoM.png" alt="MacOS logo">
+					<span>MacOS</span>
+				</button>
+			</div>
 		</div>
 	</div>
+	<script src="script.js"></script>
 </body>
 </html>
