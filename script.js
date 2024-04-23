@@ -1,12 +1,24 @@
-document.querySelectorAll('.button').forEach(button => {
-	button.addEventListener('click', () => {
-		const os = button.classList[1];
-		if (os === 'windows') {
-			window.location.href = 'download_windows.exe';
-		} else if (os === 'linux') {
-			window.location.href = 'download_linux.tar.gz';
-		} else if (os === 'macos') {
-			window.location.href = 'download_macos.dmg';
-		}
-	});
+const downloadButtonWindows = document.getElementById('download-button-windows');
+const downloadButtonMacos = document.getElementById('download-button-macos');
+const downloadButtonLinux = document.getElementById('download-button-linux');
+
+downloadButtonWindows.addEventListener('click', () => {
+  const link = document.createElement('a');
+  link.href = 'https://github.com/Spiderh2/Spider-Launcher/releases/download/1.0.2/spider-client-win-x64.exe';
+  link.download = 'spider-client-win-x64.exe';
+  link.click();
+});
+
+downloadButtonMacos.addEventListener('click', () => {
+  const link = document.createElement('a');
+  link.href = 'https://github.com/Spiderh2/Spider-Launcher/releases/download/1.0.2/spider-client-mac-universal.dmg';
+  link.download = 'spider-client-mac-universal.dmg';
+  link.click();
+});
+
+downloadButtonLinux.addEventListener('click', () => {
+  const link = document.createElement('a');
+  link.href = 'https://github.com/Spiderh2/Spider-Launcher/releases/download/1.0.2/spider-client-linux-x86_64.AppImage';
+  link.download = 'spider-client-linux-x86_64.AppImage';
+  link.click();
 });
